@@ -1,0 +1,80 @@
+#root{
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.container{
+    flex-grow: 1;
+}
+
+.sombra{
+    -webkit-box-shadow: 19px 16px 39px 10px rgba(0,0,0,0.75);
+    -moz-box-shadow: 19px 16px 39px 10px rgba(0,0,0,0.75);
+    box-shadow: 19px 16px 39px 10px rgba(0,0,0,0.75);
+}
+
+.caja{
+    background-color: gray;
+    -webkit-box-shadow: 11px 17px 40px -14px rgba(0,0,0,0.75);
+    -moz-box-shadow: 11px 17px 40px -14px rgba(0,0,0,0.75);
+    box-shadow: 11px 17px 40px -14px rgba(0,0,0,0.75);
+    min-height: 220px;
+    min-width: 220px;
+    margin-right: 50px;
+}
+.contenidoPrincipal{
+    display: flex;
+    flex-direction: row;
+
+}
+.formularioColor{
+    position: relative;
+}
+
+.btnEnviar{
+    position: absolute;
+    color: black;
+    bottom: 10px;
+    right: 10px;
+    background-color: #FFDEE9;
+    background-image: linear-gradient(0deg, #FFDEE9 0%, #B5FFFC 100%);
+    border: none;
+}
+
+.btnEnviar:hover{
+    background-color: #ff84ac;
+    background-image: linear-gradient(0deg, #ff84ac 0%, #8cfffd 100%);
+    color: black;
+}
+
+@media screen and (max-width: 767px) {
+
+    .contenidoPrincipal{
+        flex-direction: column;
+        align-items: center;
+    }
+    .caja{
+        margin: 30px 0;
+        max-height: 220px;
+        max-width: 220px;
+        margin-right: 0px;
+    }
+    .formularioColor{
+        position: static;
+        display: flex;
+        flex-direction: column;
+    }
+    .btnEnviar{
+        margin: 10px auto;
+        position: static;
+    }
+
+
+}
+
+
+
+@media screen and (min-width: 767px) and (max-width:1080px){
+
+}
