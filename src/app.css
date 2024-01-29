@@ -1,111 +1,109 @@
-#root{
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
+#root {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
-.container{
-    flex-grow: 1;
+.container {
+  flex-grow: 1;
 }
 
-.sombra{
-    -webkit-box-shadow: 19px 16px 39px 10px rgba(0,0,0,0.75);
-    -moz-box-shadow: 19px 16px 39px 10px rgba(0,0,0,0.75);
-    box-shadow: 19px 16px 39px 10px rgba(0,0,0,0.75);
+.sombra {
+  -webkit-box-shadow: 19px 16px 39px 10px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 19px 16px 39px 10px rgba(0, 0, 0, 0.75);
+  box-shadow: 19px 16px 39px 10px rgba(0, 0, 0, 0.75);
 }
 
-.caja{
-    background-color: gray;
-    min-height: 220px;
-    min-width: 220px;
+.caja {
+  background-color: gray;
+  min-height: 220px;
+  min-width: 220px;
+  -webkit-box-shadow: 10px 10px 18px 0px rgba(0,0,0,0.75);
+  -moz-box-shadow: 10px 10px 18px 0px rgba(0,0,0,0.75);
+  box-shadow: 10px 10px 18px 0px rgba(0,0,0,0.75);
 }
-.contenidoPrincipal{
-    display: flex;
-    flex-direction: row;
+.contenidoPrincipal {
+  display: flex;
+  flex-direction: row;
 
 }
-.formularioColor{
-    position: relative;
+.formularioColor {
+  position: relative;
 }
 
-.btnEnviar{
-    position: absolute;
-    color: black;
-    bottom: 10px;
-    right: 10px;
-    background-color: #FFDEE9;
-    background-image: linear-gradient(0deg, #FFDEE9 0%, #B5FFFC 100%);
-    border: none;
+.btnEnviar {
+  position: absolute;
+  color: black;
+  bottom: 10px;
+  right: 10px;
+  background-color: #ffdee9;
+  background-image: linear-gradient(0deg, #ffdee9 0%, #b5fffc 100%);
+  border: none;
 }
 
-.btnEnviar:hover{
-    background-color: #ff84ac;
-    background-image: linear-gradient(0deg, #ff84ac 0%, #8cfffd 100%);
-    color: black;
+.btnEnviar:hover {
+  background-color: #ff84ac;
+  background-image: linear-gradient(0deg, #ff84ac 0%, #8cfffd 100%);
+  color: black;
 }
 
-
-.cajaColor{
-    width: 280px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin: 20px auto;
-    
+.cajaColor {
+  width: 280px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 20px auto;
+  -webkit-box-shadow: 0px 0px 65px -15px rgba(0,0,0,0.75);
+  -moz-box-shadow: 0px 0px 65px -15px rgba(0,0,0,0.75);
+  box-shadow: 0px 0px 65px -15px rgba(0,0,0,0.75)
 }
-.cajaColor .caja{
-    margin-top: 50px;
-    min-height: 150px;
-    min-width: 150px;
+.cajaColor .caja {
+  margin-top: 50px;
+  min-height: 150px;
+  min-width: 150px;
 }
-.cajaColor .btn{
-    margin: 25px 0;
-
-}
-
-.listaColor{
-    margin-top: 75px;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
+.cajaColor .btn {
+  margin: 25px 0;
 }
 
-
+.listaColor {
+  margin-top: 75px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+.tituloSusColores{
+    margin-top: 100px;
+}
 
 @media screen and (max-width: 767px) {
+  .contenidoPrincipal {
+    flex-direction: column;
+    align-items: center;
+  }
+  .caja {
+    margin: 20px 0;
+    max-height: 200px;
+    max-width: 200px;
+    margin-right: 0px;
+  }
+  .formularioColor {
+    position: static;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+  }
+  .btnEnviar {
+    margin: 10px auto;
+    position: static;
+  }
 
-    .contenidoPrincipal{
-        flex-direction: column;
-        align-items: center;
-    }
-    .caja{
-        margin: 30px 0;
-        max-height: 220px;
-        max-width: 220px;
-        margin-right: 0px;
-    }
-    .formularioColor{
-        position: static;
-        display: flex;
-        flex-direction: column;
-    }
-    .btnEnviar{
-        margin: 10px auto;
-        position: static;
-    }
-
-    .listaColor{
-
-        grid-template-columns: repeat(1, 1fr);
-    }
-
-
+  .listaColor {
+    grid-template-columns: repeat(1, 1fr);
+  }
 }
 
-
-
-@media screen and (min-width: 767px) and (max-width:1080px){
-    .listaColor{
-
-        grid-template-columns: repeat(2, 1fr);
-    }
+@media screen and (min-width: 767px) and (max-width: 1080px) {
+  .listaColor {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }

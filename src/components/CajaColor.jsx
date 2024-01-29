@@ -3,7 +3,7 @@ import MuestraColor from "./MuestraColor";
 
 const CajaColor = ({ color }) => {
   return (
-    <Card className="cajaColor">
+    <Card className="cajaColor bg-secondary-subtle border border-0">
       <MuestraColor color={color}></MuestraColor>
       <Card.Body>
         <Card.Title className="text-center">{color}</Card.Title>
