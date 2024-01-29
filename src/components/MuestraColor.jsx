@@ -3,7 +3,7 @@ const MuestraColor = ({ color }) => {
     backgroundColor: color,
   };
 
-  return <div className="caja" style={colorDeCaja}></div>;
+  return <div className="caja sombra" style={colorDeCaja}></div>;
 };
 
 export default MuestraColor;

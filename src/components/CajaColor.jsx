@@ -1,25 +1,16 @@
-const CajaColor = () => {
+import { Button, Card } from "react-bootstrap";
+import MuestraColor from "./MuestraColor";
+
+const CajaColor = ({ color }) => {
   return (
-    <div className="contenidoPrincipal">
+    <Card className="cajaColor">
       <MuestraColor color={color}></MuestraColor>
+      <Card.Body>
+        <Card.Title className="text-center">{color}</Card.Title>
 
-      <Form className="w-100 formularioColor">
-        <Form.Group className="mb-3 ">
-          <Form.Label>Ingrese su color:</Form.Label>
-          <Form.Control
-            id="disabledTextInput"
-            placeholder="Color en Inglés... EJ: blue"
-            className="w-100"
-            onChange={(e) => setColor(e.target.value)}
-            value={color}
-          />
-        </Form.Group>
-
-        <Button type="submit" className="btnEnviar">
-          Agregar Color
-        </Button>
-      </Form>
-    </div>
+        <Button variant="danger">Borrar</Button>
+      </Card.Body>
+    </Card>
   );
 };
 
