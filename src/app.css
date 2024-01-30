@@ -15,17 +15,17 @@
 }
 
 .caja {
-  background-color: gray;
+  background-color: grey;
   min-height: 220px;
   min-width: 220px;
-  -webkit-box-shadow: 10px 10px 18px 0px rgba(0,0,0,0.75);
-  -moz-box-shadow: 10px 10px 18px 0px rgba(0,0,0,0.75);
-  box-shadow: 10px 10px 18px 0px rgba(0,0,0,0.75);
+  -webkit-box-shadow: 10px 10px 18px 0px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 10px 10px 18px 0px rgba(0, 0, 0, 0.75);
+  box-shadow: 10px 10px 18px 0px rgba(0, 0, 0, 0.75);
 }
+
 .contenidoPrincipal {
   display: flex;
   flex-direction: row;
-
 }
 .formularioColor {
   position: relative;
@@ -53,9 +53,9 @@
   flex-direction: column;
   align-items: center;
   margin: 20px auto;
-  -webkit-box-shadow: 0px 0px 65px -15px rgba(0,0,0,0.75);
-  -moz-box-shadow: 0px 0px 65px -15px rgba(0,0,0,0.75);
-  box-shadow: 0px 0px 65px -15px rgba(0,0,0,0.75)
+  -webkit-box-shadow: 0px 0px 65px -15px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 0px 0px 65px -15px rgba(0, 0, 0, 0.75);
+  box-shadow: 0px 0px 65px -15px rgba(0, 0, 0, 0.75);
 }
 .cajaColor .caja {
   margin-top: 50px;
@@ -71,8 +71,8 @@
   display: grid;
   grid-template-columns: repeat(3, 1fr);
 }
-.tituloSusColores{
-    margin-top: 100px;
+.tituloSusColores {
+  margin-top: 100px;
 }
 
 @media screen and (max-width: 767px) {

@@ -5,10 +5,16 @@ import ListaColor from "./ListaColor";
 
 const FormularioColor = () => {
 
-   
+  const arrayColoresRecuperado = JSON.parse(localStorage.getItem("arrayColores")) || [];
   const [color, setColor] = useState("");
-  const [arrayColores, setArrayColores] = useState([]);
+  const [arrayColores, setArrayColores] = useState(arrayColoresRecuperado);
+  
 
+  useEffect(() => {
+    
+    localStorage.setItem("arrayColores", JSON.stringify(arrayColores));
+  }
+  , [arrayColores])
 
   const handleSubmit = (event) => {
     event.preventDefault();
