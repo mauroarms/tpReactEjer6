@@ -3,9 +3,12 @@ import MuestraColor from "./MuestraColor";
 import { useState, useEffect } from "react";
 import ListaColor from "./ListaColor";
 import coloresCSS from "../coloresDeCSS";
+import Swal from "sweetalert2";
+import withReactContent from "sweetalert2-react-content";
 
 const FormularioColor = () => {
 
+  const ventanaEmergente = withReactContent(Swal);
   const arrayColoresRecuperado = JSON.parse(localStorage.getItem("arrayColores")) || [];
   const [color, setColor] = useState("");
   const [arrayColores, setArrayColores] = useState(arrayColoresRecuperado);
@@ -22,13 +25,22 @@ const FormularioColor = () => {
 
     if(coloresCSS.includes(color)){
       if (arrayColores.includes(color)) {
-        console.log("ya existe el color");
+        ventanaEmergente.fire({
+          icon: "error",
+          title: "¡Error!",
+          text: "El color ingresado ya existe",
+        });
+
       } else {
         setArrayColores([...arrayColores, color]);
         setColor("");
       }
     }else{
-      console.log("color invalido")
+      ventanaEmergente.fire({
+        icon: "error",
+        title: "¡Error!",
+        text: "El color ingresado es invalido NOTA: guardar en color cuando se pinte el recuadro principal",
+      });
     }
 
 
@@ -36,11 +48,33 @@ const FormularioColor = () => {
   };
 
   const borrarColor = (colorABorrar) => {
-    const filterArray = arrayColores.filter(
-      (colorDelArray) => colorDelArray !== colorABorrar
-    );
-    setArrayColores(filterArray);
+    ventanaEmergente.fire({
+      title: "¿Estás Seguro?",
+      text: "El color se borrará definitivamente",
+      icon: "warning",
+      showCancelButton: true,
+      cancelButtonColor: "#3085d6",
+      confirmButtonColor: "#d33",
+      confirmButtonText: "Borrar",
+      cancelButtonText: "Cancelar",
+    }).then((result) => {
+      if (result.isConfirmed) {
+        ventanaEmergente.fire({
+          title: "Color Borrado Correctamente",
+          text: "El color fue eliminado",
+          icon: "success",
+        });
+        const filterArray = arrayColores.filter(
+          (colorDelArray) => colorDelArray !== colorABorrar
+        );
+        setArrayColores(filterArray);
+      }
+    });
   };
+
+
+
+
 
   return (
     <>
