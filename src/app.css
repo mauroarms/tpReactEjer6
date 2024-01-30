@@ -15,12 +15,23 @@
 }
 
 .caja {
-  background-color: grey;
+  background-color: rgb(255, 255, 255);
   min-height: 220px;
   min-width: 220px;
   -webkit-box-shadow: 10px 10px 18px 0px rgba(0, 0, 0, 0.75);
   -moz-box-shadow: 10px 10px 18px 0px rgba(0, 0, 0, 0.75);
   box-shadow: 10px 10px 18px 0px rgba(0, 0, 0, 0.75);
+}
+.cajaSinColor{
+    background-image: url("./assets/fondoNoColor.jpg");
+    background-position: center;
+    background-size: cover; 
+    background-repeat: no-repeat; 
+    min-height: 220px;
+    min-width: 220px;
+    -webkit-box-shadow: 10px 10px 18px 0px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 10px 10px 18px 0px rgba(0, 0, 0, 0.75);
+    box-shadow: 10px 10px 18px 0px rgba(0, 0, 0, 0.75);
 }
 
 .contenidoPrincipal {

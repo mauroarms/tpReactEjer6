@@ -1,9 +1,27 @@
-const MuestraColor = ({ color }) => {
-  const colorDeCaja = {
-    backgroundColor: color,
-  };
+import coloresCSS from "../coloresDeCSS";
 
-  return <div className="caja" style={colorDeCaja}></div>;
+const MuestraColor = ({ color }) => {
+  let colorDeCaja;
+  let imagenNoColor;
+  if (coloresCSS.includes(color)) {
+    colorDeCaja = {
+      backgroundColor: color,
+    };
+    imagenNoColor = {
+      display: "none",
+    };
+  } else {
+    colorDeCaja = {
+      display: "none",
+    };
+  }
+
+  return (
+    <>
+      <div className="caja" style={colorDeCaja}></div>
+      <div className="cajaSinColor" style={imagenNoColor}></div>
+    </>
+  );
 };
 
 export default MuestraColor;

@@ -2,6 +2,7 @@ import { Form, Button } from "react-bootstrap";
 import MuestraColor from "./MuestraColor";
 import { useState, useEffect } from "react";
 import ListaColor from "./ListaColor";
+import coloresCSS from "../coloresDeCSS";
 
 const FormularioColor = () => {
 
@@ -19,12 +20,19 @@ const FormularioColor = () => {
   const handleSubmit = (event) => {
     event.preventDefault();
 
-    if (arrayColores.includes(color)) {
-      console.log("ya existe el color");
-    } else {
-      setArrayColores([...arrayColores, color]);
-      setColor("");
+    if(coloresCSS.includes(color)){
+      if (arrayColores.includes(color)) {
+        console.log("ya existe el color");
+      } else {
+        setArrayColores([...arrayColores, color]);
+        setColor("");
+      }
+    }else{
+      console.log("color invalido")
     }
+
+
+
   };
 
   const borrarColor = (colorABorrar) => {
