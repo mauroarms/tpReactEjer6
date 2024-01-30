@@ -4,8 +4,11 @@ import { useState, useEffect } from "react";
 import ListaColor from "./ListaColor";
 
 const FormularioColor = () => {
+
+   
   const [color, setColor] = useState("");
   const [arrayColores, setArrayColores] = useState([]);
+
 
   const handleSubmit = (event) => {
     event.preventDefault();
@@ -16,6 +19,13 @@ const FormularioColor = () => {
       setArrayColores([...arrayColores, color]);
       setColor("");
     }
+  };
+
+  const borrarColor = (colorABorrar) => {
+    const filterArray = arrayColores.filter(
+      (colorDelArray) => colorDelArray !== colorABorrar
+    );
+    setArrayColores(filterArray);
   };
 
   return (
@@ -42,7 +52,11 @@ const FormularioColor = () => {
         </Form>
       </div>
 
-      <ListaColor arrayColores={arrayColores} className="mt-5"></ListaColor>
+      <ListaColor
+        arrayColores={arrayColores}
+        borrarColor={borrarColor}
+        className="mt-5"
+      ></ListaColor>
     </>
   );
 };
