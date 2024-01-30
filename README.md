@@ -4,7 +4,8 @@ En este programa el usuario podrá agregar los colores que desee según la <a hr
 
 # Vista Previa
 
-  ![image](https://github.com/mauroarms/tpReactEjer4/assets/95541436/74d7863f-f50e-4f4f-8b24-6c2e19881d3a)
+  ![imagen](https://github.com/mauroarms/tpReactEjer6/assets/95541436/701f20a3-4cf0-4e03-ae82-51d84112c60b)
+
 
 ## Tecnologias
 
