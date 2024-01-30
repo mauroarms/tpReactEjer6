@@ -97,6 +97,12 @@
     max-width: 200px;
     margin-right: 0px;
   }
+  .cajaSinColor{
+    margin: 20px 0;
+    max-height: 200px;
+    max-width: 200px;
+    margin-right: 0px;
+}
   .formularioColor {
     position: static;
     display: flex;
